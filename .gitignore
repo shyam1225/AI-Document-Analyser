@@ -1,0 +1,20 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+venv/
+.env
+
+# VS Code settings
+.vscode/
+
+# Generated FAISS files (if you save them)
+*.faiss
+*.index
+*.npy
+
+# OS files
+.DS_Store
+Thumbs.db
