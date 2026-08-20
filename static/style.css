@@ -1,0 +1,249 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+#load{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(15,23,42,0.9);
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.spinner{
+    width:60px;
+    height:60px;
+    border:6px solid rgba(255,255,255,0.2);
+    border-top:6px solid white;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+
+#load p{
+    color:white;
+    margin-top:15px;
+    font-size:18px;
+}
+
+@keyframes spin{
+    0%{ transform:rotate(0deg); }
+    100%{ transform:rotate(360deg); }
+}
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    min-height:100vh;
+    font-family:Verdana,Geneva,Tahoma,sans-serif;
+}
+.sample-questions{
+    display:none;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+    margin:auto;
+    max-width:700px;
+    margin-top:5px;
+}
+
+.sample-questions button{
+    background:#55678e63;
+    color:white;
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:20px;
+    padding:10px 16px;
+    cursor:pointer;
+    transition:0.3s;
+    font-size:14px;
+}
+
+.sample-questions button:hover{
+    background:#3a4656;
+    transform:translateY(-2px);
+}
+.container{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    background:#1e293b;
+    overflow:hidden;
+    position:relative;
+}
+#uploadBtn{
+    width:100px;
+    padding:5px;
+    cursor:pointer;
+    border-radius:8px;
+    align-items:center
+}
+
+#fileInfo{
+    color:#9ca3af;
+    font-size:14px;
+}
+.header{
+    padding:24px;
+    text-align:center;
+    background:#0f172a;
+    color:white;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    font-family:Baskerville,serif;
+}
+
+.header h1{
+    font-size:2rem;
+    font-weight:600;
+}
+
+.upload-section{
+    padding:20px;
+    background:#1e293b;
+    color:#cbd5e1;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    max-height:200px;
+    overflow:hidden;
+    transition:all 0.3s ease;
+}
+.upload-section.hidden{
+    max-height:0;
+    padding-top:0;
+    padding-bottom:0;
+    border-bottom:none;
+    opacity:0;
+}
+.supported{
+    margin-top:10px;
+    font-size:14px;
+    opacity:0.8;
+    align-items:center
+}
+
+#pdfFile{
+    color:white;
+    margin-bottom:10px;
+    align-items:center
+}
+
+.chat-container{
+    flex:1;
+    overflow-y:auto;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    padding:20px;
+    background:#334155;
+}
+
+.disclaimer{
+    align-self:flex-start;
+    background:#11182763;
+    color:#ffffff;
+    padding:12px 18px;
+    border-radius:18px;
+    max-width:80%;
+    line-height:1.5;
+}
+
+.message{
+    align-self:flex-end;
+    background:#e5e7eb;
+    color:#111827;
+    padding:12px 18px;
+    border-radius:20px;
+    max-width:75%;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+.bot-message{
+    align-self:flex-start;
+    background:#11182763;
+    color:rgb(255, 255, 255);
+    padding:14px 18px;
+    border-radius:20px;
+    max-width:75%;
+    line-height:1.6;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+.input-section{
+    display:flex;
+    align-items:center;
+    padding:15px;
+    background:#1e293b;
+    border-top:1px solid rgba(255,255,255,0.08);
+}
+
+#questionInput{
+    flex:1;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:#475569;
+    color:white;
+    font-size:15px;
+    outline:none;
+}
+
+#questionInput::placeholder{
+    color:#cbd5e1;
+}
+
+.send-btn{
+    margin-left:10px;
+    padding:14px 25px;
+    border:none;
+    border-radius:12px;
+    background:#6122c5;
+    color:white;
+    cursor:pointer;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.send-btn:hover{
+    background:#3e16a3;
+}
+
+#preview{
+    margin-top:10px;
+    align-items:center
+}
+
+#preview a{
+    color:#60a5fa;
+    text-decoration:none;
+    display:block;
+    margin-bottom:5px;
+    align-items:center
+}
+
+#preview a:hover{
+    text-decoration:underline;
+}
+
+.chat-container::-webkit-scrollbar{
+    width:8px;
+}
+
+.chat-container::-webkit-scrollbar-track{
+    background:#334155;
+}
+
+.chat-container::-webkit-scrollbar-thumb{
+    background:#64748b;
+    border-radius:10px;
+}
+
+.chat-container::-webkit-scrollbar-thumb:hover{
+    background:#94a3b8;
+}
